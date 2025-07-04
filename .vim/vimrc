@@ -13,6 +13,7 @@ filetype off
 call plug#begin()
 
     " vim 256noir colorscheme
+   
     Plug 'andreasvc/vim-256noir'
 
     " clever-f
@@ -62,12 +63,6 @@ call plug#begin()
         nnoremap <silent> <leader>ga :BCommits<cr>
         nnoremap <silent> <leader>rg :RG<cr>
    
-    " ranger
-    
-    Plug 'francoiscabrol/ranger.vim'
-
-        let g:ranger_map_keys = 0
-        nnoremap <silent> <leader>r :Ranger<cr>'mcchrish/nnn.vim'
 
     " vim multiple cursors 
     
