@@ -1,0 +1,101 @@
+{
+    "layer": "up",
+    "spacing": 0,
+    "height": 0,
+
+    "margin-top": 8,
+    "margin-right": 8,
+    "margin-bottom": 0,
+    "margin-left": 8,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/separator",
+        "tray"
+    ],
+
+    "modules-center": [
+        // "clock".
+        "mpris"
+    ],
+
+    "modules-right": [
+        "cpu",
+        "custom/separator",
+        "custom/gpu-usage",
+        "custom/separator",
+        "memory",
+        "custom/separator",
+        "pulseaudio",
+        "custom/separator",
+        "clock"
+    ],
+
+    "custom/separator": {
+       "format": "|" 
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false
+    },
+
+    "mpris": {
+        "format": "{artist} - {title}"
+    },    
+
+    "tray": {
+        "spacing": 10,
+        "tooltip": false
+    },
+
+    "clock": {
+        "interval": 1,
+        "tooltip-format": "{:%A, %B the %d %Y}",
+        "format": "{:%H:%M:%S | %Y-%m-%d}",
+        "tooltip": true,
+        "min-length": 21,
+        "justify": "center"
+    },
+
+    "cpu": {
+        "format": "cpu: {usage}%",
+        "interval": 2,
+        "min-length": 10,
+
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "custom/gpu-usage": {
+      "exec": "cat /sys/class/hwmon/hwmon6/device/gpu_busy_percent",
+      "format": "gpu: {}%",
+      "return-type": "",
+      "min-length": 10,
+      "interval": 1
+    },
+
+    "memory": {
+        "format": "mem: {percentage}%",
+        "interval": 2,
+        "min-length": 10,
+
+        "states": {
+            "critical": 80
+        }
+    },
+   
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "vol: {volume}%",
+        "format-muted": "-MUTED-",
+        "format-bluetooth": "vol {volume}%",
+        "min-length": 10,
+        "nospacing": 1,
+        "on-click": "pavucontrol",
+        "tooltip": true
+    }
+}
