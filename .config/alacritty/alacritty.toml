@@ -1,0 +1,10 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/hyper.toml"    
+]
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Dina"
