@@ -6,7 +6,6 @@
     font-weight: 500;
     font-size: 14px;
     padding: 0;
-    color: #fdfdfd;
 }
 
 window#waybar {
@@ -48,6 +47,7 @@ tooltip {
 }
 
 #workspaces button.current_output.focused {
+    color: #0f0f0f;
     background: #ff0088;
 }
 
@@ -69,7 +69,10 @@ tooltip {
 
 #cpu,
 #memory,
-#gpu-usage,
+#mpris,
+#custom-separator,
+#custom-gpu-usage,
+#custom-separator,
 #pulseaudio {
     background-color: #000000;
     color: #fdfdfd;
