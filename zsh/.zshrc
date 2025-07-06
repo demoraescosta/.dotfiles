@@ -1,17 +1,17 @@
-export ZSH="$HOME/.oh-my-zsh"
+# -------------------------------------------------------------------------------- 
+# AUTOCOMPLETIONS
+
+# source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
 
 # -------------------------------------------------------------------------------- 
-# OH-MY-ZSH
-
-plugins=(
-    git
-    fzf
-)
+# OPTIONS
 
 ZSH_THEME="simple"
-source $ZSH/oh-my-zsh.sh
-
-export LANG=en_US.UTF-8
 
 HISTSIZE="10000"
 SAVEHIST="10000"
@@ -30,14 +30,17 @@ unsetopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
+setopt AUTO_CD
+setopt INTERACTIVE_COMMENTS
+
 # initialize zoxide
 eval "$(zoxide init zsh)"
 
-# -------------------------------------------------------------------------------- 
-# PROGRAM-SPECIFIC OPTIONS
+# Alt delete behaviour
 
-export FZF_DEFAULT_OPTS='--color=fg:-1,bg:-1,hl:#af0000,fg+:#d0d0d0,bg+:#000000,hl+:#ff0000,info:#ff0000,prompt:#ff0000,pointer:#ff0000,marker:#af0000,spinner:#eeeeee,header:#bcbcbc'
-
+bindkey -e
+bindkey '^H' backward-kill-word
+bindkey '5~' kill-word
 # -------------------------------------------------------------------------------- 
 # ALIASES & FUNCTIONS
 
@@ -71,6 +74,11 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b'
 
 setopt PROMPT_SUBST
+unsetopt PROMPT_SP
 
 PROMPT='%F{gray}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+
+# -------------------------------------------------------------------------------- 
+# PLUGINS
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
