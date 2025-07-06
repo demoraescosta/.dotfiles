@@ -1,4 +1,5 @@
 export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/usr/local/cross/bin" # add custom build i686-elf gnu cross compiler
 
 # -------------------------------------------------------------------------------- 
 # DEFAULT PROGRAMS
