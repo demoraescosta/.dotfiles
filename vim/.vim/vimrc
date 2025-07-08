@@ -124,7 +124,7 @@ set noswapfile
 
 " Clipboard
 
-" set clipboard=unnamedplus
+set clipboard=unnamedplus
 noremap <leader>y "+y
 
 " Status line

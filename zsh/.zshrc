@@ -46,9 +46,9 @@ bindkey '5~' kill-word
 
 # wokeifying the coreutils
 alias -- cat=bat
-alias -- l='exa -l --sort=extension'
-alias -- ll='exa -la --sort=extension'
 alias -- ls='exa --group-directories-first'
+alias -- l='ls -l --sort=extension'
+alias -- ll='ls -la --sort=extension --git'
 
 # shorthands
 alias -- v=vim
