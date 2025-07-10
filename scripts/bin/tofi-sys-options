@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+case "$(printf "kill\nsuspend\nlogout\nreboot\nshutdown" | tofi )" in
+	kill) ps -u $USER -o pid,comm,%cpu,%mem | tofi --prompt-text "kill: " | awk '{print $1}' | xargs -r kill ;;
+	suspend) systemctl suspend -i ;;
+    logout) hyprctl dispatch exit ;;
+	reboot) systemctl reboot -i ;;
+	shutdown) shutdown now ;;
+	*) exit 1 ;;
+esac

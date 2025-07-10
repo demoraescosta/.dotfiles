@@ -1,0 +1,4 @@
+#/usr/bin/env sh
+
+file=$(find ~/docs -type f -printf '%P\n'| tofi --prompt-text="open: " --fuzzy-match=true)
+[ ! -z $file ] && xdg-open ~/docs/$file

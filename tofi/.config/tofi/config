@@ -3,8 +3,8 @@ height = 100%
 border-width = 0
 outline-width = 0
 padding-left = 45%
-padding-top = 35%
-result-spacing = 20
+padding-top = 40%
+result-spacing = 4
 background-color = #000A
 
 num-results = 10
