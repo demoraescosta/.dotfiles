@@ -1,5 +1,6 @@
 vim/.vim/plugged
 vim/.vim/sessions
+vim/.vim/undodir
 vim/.vim/.netrwhist
 yazi/.config/yazi/yazi-toml-*
 mpd/.config/mpd/playlists
