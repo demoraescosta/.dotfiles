@@ -17,11 +17,14 @@ vim.call('plug#begin')
     -- treesitter
     Plug('nvim-treesitter/nvim-treesitter')
 
+    -- auto-session
+    Plug('rmagatti/auto-session')
+
 vim.call('plug#end')
 
 ----------------------------------------
 --- Options
-vim.cmd.colorscheme('256_noir')
+vim.cmd.colorscheme('yugen')
 
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
@@ -50,11 +53,28 @@ vim.opt.mouse = 'a'
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "markdown", "markdown_inline" },
+  ensure_installed = { 
+      "c", 
+      "go", 
+      "haskell", 
+      "rust", 
+      "lua", 
+      "vim", 
+      "vimdoc", 
+      "markdown", 
+      "markdown_inline" 
+  },
 
   highlight = {
       enable = true
   }
+}
+
+require("auto-session").setup {
+    supressed_dirs = {
+        "~/",
+        "/"
+    }
 }
 
 ----------------------------------------
