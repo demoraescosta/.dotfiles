@@ -6,8 +6,8 @@ export PATH="$PATH:/home/andre/.local/share/gem/ruby/3.4.0/bin" # ruby gems
 # -------------------------------------------------------------------------------- 
 # DEFAULT PROGRAMS
 
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
 
