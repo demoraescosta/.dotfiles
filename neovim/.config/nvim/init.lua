@@ -2,7 +2,6 @@ local vim = vim
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
-
     -- COLORSCHEMES
     Plug('andreasvc/vim-256noir') -- vim 256noir colorscheme
     Plug('fcpg/vim-fahrenheit')

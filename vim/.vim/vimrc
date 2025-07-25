@@ -238,4 +238,3 @@ endif
 
 au VimLeave * :call MakeSession()
 
-

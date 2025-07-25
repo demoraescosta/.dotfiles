@@ -19,6 +19,7 @@ export XDG_PICTURES_DIR="$HOME/images"
 export XDG_VIDEOS_DIR="$HOME/images"
 export XDG_DOCUMENTS_DIR="$HOME/docs"
 export XDG_MUSIC_DIR="$HOME/music"
+export XDG_CACHE_HOME="$HOME/.cache"
 
 # -------------------------------------------------------------------------------- 
 # PROGRAM-SPECIFIC OPTIONS
