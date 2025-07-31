@@ -52,6 +52,7 @@ alias -- ll='ls -la --sort=extension --git'
 
 # shorthands
 alias -- v=nvim
+alias -- h=helix
 
 # utilities
 alias -- wttr='curl wttr.in/rio'
