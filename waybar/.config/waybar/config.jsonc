@@ -42,8 +42,7 @@
     },
 
     "mpris": {
-        "format": "{artist} - {title}",
-        "max-length": 128
+        "format": "{artist} - {title}"
     },    
 
     "tray": {
