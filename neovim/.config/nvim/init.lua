@@ -3,11 +3,7 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
     -- COLORSCHEMES
-    Plug('andreasvc/vim-256noir') -- vim 256noir colorscheme
-    Plug('fcpg/vim-fahrenheit')
-    Plug('hachy/eva01.vim')
-    Plug('bettervim/yugen.nvim')
-    Plug('paulo-granthon/hyper.nvim')
+    Plug('demoraescosta/hyper.nvim')
 
     -- fzf
     Plug('junegunn/fzf')
@@ -23,7 +19,7 @@ vim.call('plug#end')
 
 ----------------------------------------
 --- Options
-vim.cmd.colorscheme('yugen')
+vim.cmd.colorscheme('hyper')
 
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
