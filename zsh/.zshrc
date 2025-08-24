@@ -36,11 +36,10 @@ setopt INTERACTIVE_COMMENTS
 # initialize zoxide
 eval "$(zoxide init zsh)"
 
-# Alt delete behaviour
-
 bindkey -e
 bindkey '^H' backward-kill-word
 bindkey '5~' kill-word
+
 # -------------------------------------------------------------------------------- 
 # ALIASES & FUNCTIONS
 
@@ -70,14 +69,21 @@ function y() {
 # PROMPT
 
 autoload -Uz vcs_info
-precmd() { vcs_info }
 
-zstyle ':vcs_info:git:*' formats '%b'
+precmd() {
+    vcs_info
+}
+
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:*' formats '(%b)%c '
 
 setopt PROMPT_SUBST
 unsetopt PROMPT_SP
 
-PROMPT='%F{gray}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+# PROMPT='%F{gray}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+PROMPT='%B%F{green}[%*]%f%b %B%F{yellow}%n%f%b%B%F{blue}@%f%b%F{cyan}%M%f %F{blue}%~%f %B%F{red}${vcs_info_msg_0_}%f%b$ '
 
 # -------------------------------------------------------------------------------- 
 # PLUGINS
