@@ -25,9 +25,10 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
-vim.opt.scrolloff = 3
+vim.opt.scrolloff = 10
 vim.opt.ruler = true
 vim.opt.showcmd = true
 vim.opt.sidescroll = 1
@@ -42,7 +43,9 @@ vim.opt.numberwidth = 5
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.showmatch = true
-vim.opt.smartcase = true
+vim.opt.ignorecase = true
+
+vim.opt.undofile = true
 
 vim.opt.mouse = 'a'
 
