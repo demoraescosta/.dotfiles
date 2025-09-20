@@ -9,53 +9,74 @@
     "margin-left": 8,
 
     "modules-left": [
+        "clock",
         "hyprland/workspaces",
-        "custom/separator",
-        "tray"
+        "hyprland/window"
     ],
 
     "modules-center": [
-        // "clock".
-        "mpris"
+        "mpris",
+        "pulseaudio"
     ],
 
     "modules-right": [
         "cpu",
-        "custom/separator",
         "custom/gpu-usage",
-        "custom/separator",
-        "memory",
-        "custom/separator",
-        "pulseaudio",
-        "custom/separator",
-        "clock"
+        // "memory",
+        "clock#clock2"
     ],
 
     "custom/separator": {
        "format": "|" 
     },
 
+    "hyprland/window": {
+        "format": ": {initialTitle}",
+        "rewrite": {
+            "(.*)Mozilla Firefox": ": Firefox",
+
+            ": ": ""
+        },
+        "max-length": 10,
+        "min-length": 10,
+        "align": 0
+    },
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "tooltip": false
+        "tooltip": true
     },
 
     "mpris": {
-        "format": "{artist} - {title}"
+        "player": "cmus",
+        "format": "{artist} - {title}",
+        "max-length": 60,
+        "tooltip-format": "{album}, {position} / {length} @ {player}",
+        "interval": 1
     },    
 
-    "tray": {
-        "spacing": 10,
-        "tooltip": false
+    "clock": {
+        // "interval": 1,
+        // "tooltip-format": "{:%A, %B the %d %Y}",
+        // "format": "{:%H:%M:%S | %Y-%m-%d}",
+        // "tooltip": true,
+        // "min-length": 21,
+        // "justify": "center"
+
+        "interval": 1,
+        "tooltip-format": "{:%Y-%m-%d, %A}",
+        "format": "{:%H:%M:%S }",
+        "tooltip": true,
+        "min-length": 8,
+        "justify": "center"
     },
 
-    "clock": {
+    "clock#clock2": {
         "interval": 1,
-        "tooltip-format": "{:%A, %B the %d %Y}",
-        "format": "{:%H:%M:%S | %Y-%m-%d}",
+        "format": "{:%Y-%m-%d}",
         "tooltip": true,
-        "min-length": 21,
+        "min-length": 8,
         "justify": "center"
     },
 
@@ -90,12 +111,12 @@
     "pulseaudio": {
         "scroll-step": 5,
         "max-volume": 150,
-        "format": "vol: {volume}%",
+        "format": "@ {volume}% volume",
         "format-muted": "-MUTED-",
         "format-bluetooth": "vol {volume}%",
-        "min-length": 10,
         "nospacing": 1,
         "on-click": "pavucontrol",
-        "tooltip": true
+        "tooltip": true,
+        "align": 0
     }
 }

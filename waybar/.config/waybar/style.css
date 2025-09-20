@@ -3,14 +3,8 @@
     border-radius: 0;
     min-height: 0;
     font-family: "Dina";
-    font-weight: 400;
     font-size: 14px;
     padding: 0;
-}
-
-window#waybar {
-    background: #000000;
-    border: 2px solid #000000;
 }
 
 tooltip {
@@ -27,10 +21,42 @@ tooltip {
     margin: 8px 0px 8px 8px;
 }
 
-#workspaces {
-    background-color: #000000;
-    margin: 6px 0px 6px 6px;
+
+window#waybar {
+    font-weight: bold;
+    background: #000000;
     border: 2px solid #000000;
+}
+
+@keyframes shiny-animation {
+    0% {
+        color: #ff0000;
+    }
+    20% {
+        color: #ffff00;
+    }
+    40% {
+        color: #33ff00;
+    }
+    60% {
+        color: #0066ff;
+    }
+    80% {
+        color: #cc00ff;
+    }
+    100% {
+        color: #ff0066;
+    }
+}
+
+#window {
+    font-weight: bold;
+    background-color: #000000;
+    color: #ffffff;
+    padding-left: 8px;
+
+    /* animation: shiny-animation 2s ease-in-out infinite; */
+
 }
 
 #workspaces button {
@@ -46,75 +72,6 @@ tooltip {
     background: #ffffff
 }
 
-/**/
-/* #workspaces button:nth-child(1) { background: linear-gradient(166deg, shade(@grad_1, 1.1), shade(@grad_1, 0.9)); } */
-/**/
-/* #workspaces button:nth-child(1):hover { background: linear-gradient(166deg, shade(@grad_1, 1.4), shade(@grad_1, 0.8)); } */
-/**/
-/**/
-/**/
-/* #workspaces button:nth-child(2) { background: linear-gradient(166deg, shade(@grad_2, 1.1), shade(@grad_2, 0.9)); } */
-/**/
-/* #workspaces button:nth-child(2):hover { background: linear-gradient(166deg, shade(@grad_2, 1.4), shade(@grad_2, 0.8)); } */
-/**/
-/**/
-/**/
-/* #workspaces button:nth-child(3) { background: linear-gradient(166deg, shade(@grad_3, 1.1), shade(@grad_3, 0.9)); } */
-/**/
-/* #workspaces button:nth-child(3):hover { background: linear-gradient(166deg, shade(@grad_3, 1.4), shade(@grad_3, 0.8)); } */
-/**/
-/**/
-/**/
-/* #workspaces button:nth-child(4) { background: linear-gradient(166deg, shade(@grad_4, 1.1), shade(@grad_4, 0.9)); } */
-/**/
-/* #workspaces button:nth-child(4):hover { background: linear-gradient(166deg, shade(@grad_4, 1.4), shade(@grad_4, 0.8)); } */
-/**/
-/**/
-/**/
-/* #workspaces button:nth-child(5) { background: linear-gradient(166deg, shade(@grad_5, 1.1), shade(@grad_5, 0.9)); } */
-/**/
-/* #workspaces button:nth-child(5):hover { background: linear-gradient(166deg, shade(@grad_5, 1.4), shade(@grad_5, 0.8)); } */
-/**/
-/**/
-/**/
-/**/
-/* #workspaces button:nth-child(6) { background: linear-gradient(166deg, shade(@grad_6, 1.1), shade(@grad_6, 0.9)); } */
-/**/
-/**/
-/* #workspaces button:nth-child(6):hover { background: linear-gradient(166deg, shade(@grad_6, 1.4), shade(@grad_6, 0.8)); } */
-/**/
-/**/
-/* #workspaces button:nth-child(6) { background: linear-gradient(166deg, shade(@grad_5, 1.1), shade(@grad_5, 0.9)); } */
-/**/
-/**/
-/* #workspaces button:nth-child(6):hover { background: linear-gradient(166deg, shade(@grad_5, 1.4), shade(@grad_5, 0.8)); } */
-/**/
-/**/
-/**/
-/**/
-/**/
-/* #workspaces button:nth-child(7) { background: linear-gradient(166deg, shade(@grad_5, 1.1), shade(@grad_5, 0.9)); } */
-/**/
-/**/
-/* #workspaces button:nth-child(7):hover { background: linear-gradient(166deg, shade(@grad_5, 1.4), shade(@grad_5, 0.8)); } */
-/**/
-/**/
-/**/
-/**/
-/**/
-/* #workspaces button:nth-child(8) { background: linear-gradient(166deg, shade(@grad_5, 1.1), shade(@grad_5, 0.9)); } */
-/**/
-/**/
-/* #workspaces button:nth-child(8):hover { background: linear-gradient(166deg, shade(@grad_5, 1.4), shade(@grad_5, 0.8)); } */
-/**/
-/**/
-/**/
-/**/
-/**/
-/* #workspaces button:nth-child(9) { background: linear-gradient(166deg, shade(@grad_5, 1.1), shade(@grad_5, 0.9)); } */
-/**/
-/**/
-/* #workspaces button:nth-child(9):hover { background: linear-gradient(166deg, shade(@grad_5, 1.4), shade(@grad_5, 0.8)); } */
 #workspaces button.urgent {
     background-color: #555555;
     color: #bdbdbd
@@ -122,9 +79,14 @@ tooltip {
 
 #clock {
     background-color: #000000;
+    font-weight: bold;
     color: #fdfdfd;
-    margin-right: 16px;
     margin-left: 8px
+
+}
+
+#clock.clock2 {
+    margin-right: 8px
 }
 
 #tray {
@@ -139,12 +101,13 @@ tooltip {
 #pulseaudio {
     background-color: #000000;
     color: #ffffff;
+    font-weight: 400;
 }
 
 #mpris {
     font-weight: bold;
     background-color: #000000;
-    color: #ffff00;
+    color: #ffffff;
 }
 
 #cpu.critical,
