@@ -11,7 +11,7 @@
     "modules-left": [
         "clock",
         "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/window",
     ],
 
     "modules-center": [
@@ -20,8 +20,7 @@
     ],
 
     "modules-right": [
-        "cpu",
-        "custom/gpu-usage",
+        "hyprland/workspaces#w2",
         // "memory",
         "clock#clock2"
     ],
@@ -37,8 +36,6 @@
 
             ": ": ""
         },
-        "max-length": 10,
-        "min-length": 10,
         "align": 0
     },
 
@@ -48,8 +45,14 @@
         "tooltip": true
     },
 
+    "hyprland/workspaces#w2": {
+        "show-special": true,
+        "all-outputs": false,
+        "special-active-only": true,
+        "ignore-workspaces": [ "^[0-9]", "(special:)?Game" ]
+    },
+
     "mpris": {
-        "player": "cmus",
         "format": "{artist} - {title}",
         "max-length": 60,
         "tooltip-format": "{album}, {position} / {length} @ {player}",
