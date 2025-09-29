@@ -1,17 +1,17 @@
 {
     "layer": "top",
-    "spacing": 0,
-    "height": 0,
+    "spacing": 8,
+    "height": 48,
 
-    "margin-top": 8,
-    "margin-right": 8,
-    "margin-bottom": 8,
-    "margin-left": 8,
+    "margin-top": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
 
     "modules-left": [
         "clock",
         "hyprland/workspaces",
-        "hyprland/window",
+        "hyprland/window"
     ],
 
     "modules-center": [
@@ -25,14 +25,11 @@
         "clock#clock2"
     ],
 
-    "custom/separator": {
-       "format": "|" 
-    },
-
     "hyprland/window": {
-        "format": ": {initialTitle}",
+        "format": ": {}",
         "rewrite": {
             "(.*)Mozilla Firefox": ": Firefox",
+            "(.*)v": ": Vim",
 
             ": ": ""
         },

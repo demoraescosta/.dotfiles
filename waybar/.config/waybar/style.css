@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    min-height: 0;
+
     font-family: "Dina";
     font-size: 14px;
     padding: 0;
@@ -53,7 +53,6 @@ window#waybar {
     font-weight: bold;
     background-color: #000000;
     color: #ffffff;
-    padding-left: 8px;
 
     /* animation: shiny-animation 2s ease-in-out infinite; */
 
@@ -61,9 +60,11 @@ window#waybar {
 
 #workspaces button {
     all: initial;
-    min-width: 0;
+    /* min-width: 0; */
     padding: 0px 4px;
     color: #ffffff;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 #workspaces button.active {
@@ -88,13 +89,14 @@ window#waybar {
     background-color: #000000;
     font-weight: bold;
     color: #fdfdfd;
-    margin-left: 8px
 
+    margin-left: 16px;
+    margin-right: 0px
 }
 
 #clock.clock2 {
     margin-left: 0px;
-    margin-right: 8px
+    margin-right: 16px
 }
 
 #tray {

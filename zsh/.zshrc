@@ -29,6 +29,7 @@ setopt HIST_IGNORE_SPACE
 unsetopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
+setopt PRINT_EXIT_VALUE
 
 setopt AUTO_CD
 setopt INTERACTIVE_COMMENTS
@@ -81,10 +82,12 @@ zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:*' formats '(%b)%c '
 
 setopt PROMPT_SUBST
-unsetopt PROMPT_SP
+setopt PROMPT_SP
+
+PROMPT_EOL_MARK=$''
 
 # PROMPT='%F{gray}%~%f %F{red}${vcs_info_msg_0_}%f$ '
-PROMPT='%B%F{green}[%*]%f%b %B%F{yellow}%n%f%b%B%F{blue}@%f%b%F{cyan}%M%f %F{blue}%~%f %B%F{red}${vcs_info_msg_0_}%f%b$ '
+PROMPT='%B%F{green}[%*]%f%b %B%F{yellow}%n%f%b%B%F{blue}@%f%b%F{cyan}%M%f %F{blue}%2~%f %B%F{red}${vcs_info_msg_0_}%f%b$ '
 
 # -------------------------------------------------------------------------------- 
 # PLUGINS

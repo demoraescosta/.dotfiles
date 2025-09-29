@@ -1,6 +1,8 @@
-vim/.vim/plugged
-vim/.vim/sessions
-vim/.vim/undodir
-vim/.vim/.netrwhist
+vim/.config/vim/plugged
+vim/.config/vim/sessions
+vim/.config/vim/undodir
+vim/.config/vim/.netrwhist
 yazi/.config/yazi/yazi-toml-*
 mpd/.config/mpd/playlists
+cmus/.config/cmus/playlists
+tf2/
